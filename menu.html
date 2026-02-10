@@ -1,0 +1,1278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0c10" />
+  <title>Khayal Lounge | Luxury Middle Eastern Lounge in Mississauga</title>
+  <meta name="description" content="Khayal Lounge — Luxury Middle Eastern Food • Drinks & Cocktails • Shisha شيشة • Live Saturday Nights • Private Events." />
+
+  <!-- Fonts (safe + luxury) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#07080b;
+      --bg2:#0b0c10;
+      --card:rgba(255,255,255,.06);
+      --card2:rgba(255,255,255,.08);
+      --line:rgba(255,255,255,.12);
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.70);
+      --muted2:rgba(255,255,255,.55);
+      --gold1:#f0d48a;
+      --gold2:#b78628;
+      --shadow:0 24px 70px rgba(0,0,0,.55);
+      --shadow2:0 18px 44px rgba(0,0,0,.45);
+      --radius:22px;
+      --radius2:16px;
+      --max:1200px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{
+  background: #000; height:100%; }
+    body{
+      margin:0;
+      background:#000;
+      color:var(--text);
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    img{ max-width:100%; display:block; }
+
+    /* ====== Subtle animated gold noise ====== */
+    .noise{
+      pointer-events:none;
+      position:fixed; inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+      mix-blend-mode:overlay;
+      opacity:.22;
+      animation:noiseMove 7s linear infinite;
+    }
+    @keyframes noiseMove{
+      0%{ transform:translate3d(0,0,0); }
+      100%{ transform:translate3d(-60px,-40px,0); }
+    }
+
+    /* ====== Header ====== */
+    .header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(140%) blur(14px);
+      background:linear-gradient(180deg, rgba(8,9,12,.80), rgba(8,9,12,.45));
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .header-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width:220px;
+    }
+.brand-logo{
+border:1px solid rgba(240,212,138,.35);
+      box-shadow:0 10px 25px rgba(0,0,0,.45);
+      background:rgba(255,255,255,.03);
+align-items:center;
+      justify-content:center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+    .brand-title{
+      display:flex; flex-direction:column; line-height:1.05;
+    }
+    .brand-title .name{
+      font-family:Cinzel, serif;
+      letter-spacing:.08em;
+      font-weight:700;
+      font-size:16px;
+    }
+    .brand-title .tag{
+      font-size:12px;
+      color:var(--muted2);
+    }
+
+    .nav{
+      display:flex; align-items:center; gap:18px;
+    }
+    .nav a{
+      position:relative;
+      padding:10px 6px;
+      font-weight:500;
+      color:rgba(255,255,255,.82);
+      transition:transform .2s ease, color .2s ease;
+    }
+    .nav a:hover{
+      color:rgba(255,255,255,.95);
+      transform:translateY(-1px);
+    }
+    .nav a::after{
+      content:"";
+      position:absolute;
+      left:6px; right:6px; bottom:6px;
+      height:1px;
+      background:linear-gradient(90deg, transparent, rgba(240,212,138,.9), transparent);
+      transform:scaleX(0);
+      transform-origin:center;
+      transition:transform .24s ease;
+    }
+    .nav a:hover::after{ transform:scaleX(1); }
+
+    .header-actions{
+      display:flex; align-items:center; gap:10px;
+      min-width:220px;
+      justify-content:flex-end;
+    }
+
+    .pill{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+      transition:transform .2s ease, border-color .2s ease, background .2s ease;
+      font-weight:600;
+      font-size:13px;
+    }
+    .pill:hover{
+      transform:translateY(-1px);
+      border-color:rgba(240,212,138,.35);
+      background:rgba(255,255,255,.07);
+    }
+
+    .cta{
+      border:1px solid rgba(240,212,138,.35);
+      background:
+        linear-gradient(180deg, rgba(240,212,138,.20), rgba(183,134,40,.14));
+      position:relative;
+      overflow:hidden;
+    }
+    .cta::before{
+      content:"";
+      position:absolute; inset:-40%;
+      background:linear-gradient(90deg, transparent, rgba(240,212,138,.40), transparent);
+      transform:translateX(-60%) rotate(14deg);
+      animation:shimmer 3.6s ease-in-out infinite;
+    }
+    @keyframes shimmer{
+      0%{ transform:translateX(-70%) rotate(14deg); opacity:.0; }
+      22%{ opacity:.45; }
+      50%{ transform:translateX(80%) rotate(14deg); opacity:.20; }
+      100%{ transform:translateX(80%) rotate(14deg); opacity:0; }
+    }
+
+    .hamburger{
+      display:none;
+      width:44px; height:44px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      align-items:center; justify-content:center;
+      cursor:pointer;
+    }
+    .hamburger span{
+      width:18px; height:2px;
+      background:rgba(255,255,255,.85);
+      display:block;
+      position:relative;
+    }
+    .hamburger span::before,
+    .hamburger span::after{
+      content:"";
+      position:absolute; left:0;
+      width:18px; height:2px;
+      background:rgba(255,255,255,.85);
+    }
+    .hamburger span::before{ top:-6px; }
+    .hamburger span::after{ top:6px; }
+
+    .mobile-drawer{
+      display:none;
+      border-top:1px solid rgba(255,255,255,.08);
+      background:rgba(8,9,12,.78);
+      backdrop-filter:blur(12px);
+    }
+    .mobile-drawer .inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:10px 18px 14px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .mobile-drawer a{
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+      font-weight:600;
+    }
+
+    /* ====== Hero ====== */
+    .hero{
+      position:relative;
+      width:100%;
+      min-height:86vh;
+      display:flex;
+      align-items:stretch;
+    }
+.hero-bg{transform:scale(1.02);
+  position: absolute;
+  inset: 0;
+  background: url("Logo.png") center/contain no-repeat;
+  filter: drop-shadow(0 18px 60px rgba(240,212,138,.22));
+  opacity: 1;
+}
+.hero::after{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(900px 380px at 70% 35%, rgba(183,134,40,.16), transparent 60%),
+        linear-gradient(180deg, rgba(7,8,11,.25), rgba(7,8,11,.92));
+      pointer-events:none;
+  display: none;
+}
+.hero-inner{
+      position:relative;
+      z-index:2;
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:76px 18px 42px;
+grid-template-columns: 1.15fr .85fr;
+      gap:26px;
+      align-items:center;
+  display: none;
+}
+    
+    /* Intro content lives BELOW the hero logo */
+    .intro{
+      width:100%;
+      padding:56px 0 10px;
+      position:relative;
+    }
+    .intro-inner{
+      position:relative;
+      z-index:2;
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 18px 42px;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:26px;
+      align-items:start;
+    }
+    @media (max-width: 980px){
+      .intro-inner{grid-template-columns:1fr; padding-bottom:26px;}
+    }
+
+    .intro h1{
+      font-family: Cinzel, serif;
+      font-size: 62px;
+      letter-spacing: .06em;
+      line-height: 1.02;
+      margin: 18px 0 12px;
+    }
+    .intro .lead{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.65;
+      max-width: 62ch;
+    }
+    @media (max-width: 980px){
+      .intro h1{font-size:54px;}
+    }
+    @media (max-width: 520px){
+      .intro h1{font-size:44px;}
+      .intro .lead{font-size:16px;}
+    }
+
+
+    /* Intro background (cinematic, but still black) */
+    .intro{
+      background:#000;
+      overflow:hidden;
+    }
+    .intro::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("Food2.jpeg") center/cover no-repeat;
+      opacity:.22;
+      filter:saturate(110%) contrast(110%) brightness(.55);
+      transform:scale(1.03);
+      pointer-events:none;
+    }
+    .intro::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.90));
+      pointer-events:none;
+    }
+    .intro-inner{ position:relative; z-index:2; }
+.kicker{
+  border:1px solid rgba(240,212,138,.22);
+  background:rgba(255,255,255,.06);
+  color:rgba(255,255,255,.86);
+  font-weight:600;
+  width:fit-content;
+  max-width:100%;
+  box-shadow:var(--shadow2);
+  border-radius:999px;
+  padding:10px 14px;
+  display:inline-flex;
+  flex-wrap:wrap;
+  gap:10px;
+  row-gap:6px;
+  align-items:center;
+  line-height:1.2;
+}
+.kicker span:last-child{
+  min-width:0;
+  white-space:normal;
+  word-break:break-word;
+}
+
+    .dot{
+      width:8px; height:8px; border-radius:99px;
+      background:linear-gradient(180deg, var(--gold1), var(--gold2));
+      box-shadow:0 0 0 6px rgba(240,212,138,.12);
+      animation:pulse 1.9s ease-in-out infinite;
+    }
+    @keyframes pulse{
+      0%,100%{ transform:scale(1); opacity:.9; }
+      50%{ transform:scale(1.18); opacity:1; }
+    }
+
+    .hero h1{
+      margin:18px 0 10px;
+      font-family:Cinzel, serif;
+      letter-spacing:.06em;
+      font-weight:700;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height:1.05;
+      text-shadow:0 20px 60px rgba(0,0,0,.55);
+    }
+    .hero p{
+      margin:0;
+      color:rgba(255,255,255,.78);
+      font-size:15px;
+      line-height:1.7;
+      max-width:52ch;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      margin-top:18px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
+      font-weight:700;
+      font-size:14px;
+      transition:transform .2s ease, border-color .2s ease, background .2s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .btn:hover{
+      transform:translateY(-1px);
+      border-color:rgba(240,212,138,.35);
+      background:rgba(255,255,255,.08);
+    }
+    .btn-gold{
+      border:1px solid rgba(240,212,138,.38);
+      background:linear-gradient(180deg, rgba(240,212,138,.22), rgba(183,134,40,.14));
+      box-shadow:0 18px 44px rgba(0,0,0,.45);
+    }
+    .btn-gold::before{
+      content:"";
+      position:absolute; inset:-50%;
+      background:linear-gradient(90deg, transparent, rgba(240,212,138,.42), transparent);
+      transform:translateX(-70%) rotate(14deg);
+      animation:shimmer 3.6s ease-in-out infinite;
+    }
+    .btn-dark{
+      background:rgba(0,0,0,.30);
+    }
+
+    .hero-card{
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-card::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(500px 240px at 30% 20%, rgba(240,212,138,.12), transparent 60%),
+        radial-gradient(420px 240px at 80% 10%, rgba(183,134,40,.10), transparent 60%);
+      pointer-events:none;
+    }
+    .hero-card-inner{
+      position:relative;
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .mini-title{
+      font-family:Cinzel, serif;
+      letter-spacing:.08em;
+      font-weight:700;
+      font-size:15px;
+      margin:0;
+    }
+    .mini-line{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+    }
+    .mini-line b{
+      color:rgba(255,255,255,.92);
+      font-weight:700;
+    }
+
+    .badge-row{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:4px;
+    }
+    .badge{
+      border-radius:999px;
+      padding:8px 10px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(0,0,0,.24);
+      font-size:12px;
+      color:rgba(255,255,255,.78);
+      font-weight:700;
+      white-space:nowrap;
+    }
+    .badge.gold{
+      border-color:rgba(240,212,138,.28);
+      color:rgba(255,255,255,.88);
+      background:linear-gradient(180deg, rgba(240,212,138,.12), rgba(183,134,40,.08));
+    }
+
+    /* ====== Layout sections ====== */
+    .section{
+      width:100%;
+      padding:68px 18px;
+      position:relative;
+    }
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+    }
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:22px;
+    }
+    .section-title{
+      margin:0;
+      font-family:Cinzel, serif;
+      letter-spacing:.08em;
+      font-weight:700;
+      font-size:22px;
+    }
+    .section-sub{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+      max-width:70ch;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:16px;
+    }
+
+    .card{
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      box-shadow:var(--shadow2);
+      overflow:hidden;
+      position:relative;
+    }
+    .card.pad{ padding:18px; }
+    .card .topline{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin-bottom:10px;
+    }
+    .card h3{
+      margin:0;
+      font-size:15px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .imgCard{
+      position:relative;
+      min-height:555px;
+    }
+    .imgCard .bg{
+  position:absolute;
+  inset:0;
+  background-size:100% 100%;
+  background-position:center;
+  background-repeat:no-repeat;
+  filter:saturate(115%) contrast(108%);
+  transform:none;
+}
+    .imgCard:hover .bg{ transform:scale(1.08); }
+    .imgCard::after{
+      content:"";
+      position:absolute; inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.78));
+    }
+    .imgCard .content{
+      position:absolute; inset:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      padding:18px;
+      z-index:2;
+    }
+    .imgCard .title{
+      font-family:Cinzel, serif;
+      letter-spacing:.08em;
+      font-weight:700;
+      margin:0;
+      font-size:18px;
+    }
+    .imgCard .meta{
+      margin-top:6px;
+      color:rgba(255,255,255,.78);
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    /* ====== Booking ====== */
+    .form{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:7px;
+    }
+    label{
+      font-size:12px;
+      color:rgba(255,255,255,.78);
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(0,0,0,.28);
+      color:rgba(255,255,255,.92);
+      outline:none;
+      transition:border-color .2s ease, transform .2s ease, background .2s ease;
+      font-size:14px;
+    }
+    input:focus, select:focus, textarea:focus{
+      border-color:rgba(240,212,138,.35);
+      background:rgba(0,0,0,.35);
+    }
+    textarea{ min-height:92px; resize:vertical; }
+    .full{ grid-column:1 / -1; }
+
+    .form-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+      align-items:center;
+    }
+    .hint{
+      color:rgba(255,255,255,.55);
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    .goldline{
+      height:1px;
+      background:linear-gradient(90deg, transparent, rgba(240,212,138,.55), transparent);
+      margin:14px 0;
+      opacity:.9;
+    }
+
+    /* ====== Social ====== */
+    .social{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .iconBtn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      font-weight:800;
+      font-size:13px;
+      transition:transform .2s ease, border-color .2s ease;
+    }
+    .iconBtn:hover{
+      transform:translateY(-1px);
+      border-color:rgba(240,212,138,.35);
+    }
+    .icon{
+      width:10px; height:10px; border-radius:99px;
+      background:linear-gradient(180deg, var(--gold1), var(--gold2));
+      box-shadow:0 0 0 6px rgba(240,212,138,.10);
+    }
+
+    /* ====== Footer ====== */
+    footer{
+      border-top:1px solid rgba(255,255,255,.10);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      padding:34px 18px;
+      position:relative;
+      overflow:hidden;
+    }
+    footer::before{
+      content:"";
+      position:absolute; inset:-40%;
+      background:radial-gradient(closest-side, rgba(240,212,138,.10), transparent 70%);
+      pointer-events:none;
+      transform:translate3d(0,0,0);
+    }
+    .footer-grid{
+      max-width:var(--max);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap:16px;
+      align-items:start;
+    }
+    .foot-brand{
+      display:flex; gap:12px; align-items:center;
+    }
+.foot-brand img{
+  border-radius:50%;
+  border:1px solid rgba(240,212,138,.28);
+  background:rgba(255,255,255,.04);
+  width:44px;
+  height:44px;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+  padding:0;
+  margin:0;
+}
+    .foot-title{
+      font-family:Cinzel, serif;
+      letter-spacing:.08em;
+      font-weight:700;
+      margin:0;
+      font-size:16px;
+    }
+    .foot-sub{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.7;
+    }
+    .foot-col h4{
+      margin:0 0 10px;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.04em;
+      color:rgba(255,255,255,.88);
+    }
+    .foot-col a{
+      display:block;
+      padding:8px 0;
+      color:rgba(255,255,255,.72);
+      font-weight:600;
+      font-size:13px;
+    }
+    .foot-col a:hover{ color:rgba(255,255,255,.92); }
+    .copyright{
+      max-width:var(--max);
+      margin:18px auto 0;
+      padding-top:14px;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:rgba(255,255,255,.55);
+      font-size:12px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    /* ====== Reveal animation ====== */
+    .reveal{
+      opacity:0;
+      transform:translateY(12px);
+      transition:opacity .7s ease, transform .7s ease;
+    }
+    .reveal.show{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    /* ====== Floating quick actions ====== */
+    .floatbar{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:60;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .floatbar a{
+      width:52px; height:52px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(10,11,15,.62);
+      backdrop-filter:blur(12px);
+      box-shadow:0 18px 44px rgba(0,0,0,.45);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .floatbar a:hover{
+      border-color:rgba(240,212,138,.35);
+      transform:translateY(-1px);
+    }
+    .floatbar a::before{
+      content:"";
+      position:absolute; inset:-60%;
+      background:linear-gradient(90deg, transparent, rgba(240,212,138,.30), transparent);
+      transform:translateX(-70%) rotate(14deg);
+      animation:shimmer 4s ease-in-out infinite;
+      opacity:.25;
+    }
+    .floatbar svg{
+      width:22px; height:22px;
+      position:relative;
+      z-index:2;
+      fill:rgba(255,255,255,.92);
+    }
+
+    /* ====== Responsive ====== */
+    @media (max-width: 980px){
+      .hero-inner{ grid-template-columns:1fr; padding-top:58px; }
+      .header-actions{ display:none; }
+      .nav{ display:none; }
+      .hamburger{ display:flex; }
+      .mobile-drawer{ display:block; }
+      .footer-grid{ grid-template-columns:1fr; }
+      .form{ grid-template-columns:1fr; }
+    }
+
+.brand-logo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.brand-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+/* Hero Logo Motion + Shine */
+.hero{
+  min-height: 82vh;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+.hero-bg::before{
+  content:"";
+  position:absolute;
+  inset:-20%;
+  background: radial-gradient(closest-side at 50% 50%, rgba(240,212,138,.22), rgba(240,212,138,0) 60%);
+  opacity:.9;
+  transform: scale(1);
+  animation: logoGlowPulse 6s ease-in-out infinite;
+  pointer-events:none;
+}
+.hero-bg::after{
+  content:"";
+  position:absolute;
+  inset:-30%;
+  background: linear-gradient(120deg, rgba(240,212,138,0) 35%, rgba(240,212,138,.35) 50%, rgba(240,212,138,0) 65%);
+  transform: translateX(-40%) rotate(0deg);
+  animation: logoShimmerSweep 4.8s ease-in-out infinite;
+  mix-blend-mode: screen;
+  opacity:.65;
+  pointer-events:none;
+}
+@keyframes logoShimmerSweep{
+  0%{ transform: translateX(-55%) rotate(2deg); opacity:.0; }
+  18%{ opacity:.55; }
+  50%{ transform: translateX(20%) rotate(2deg); opacity:.75; }
+  82%{ opacity:.35; }
+  100%{ transform: translateX(55%) rotate(2deg); opacity:0; }
+}
+@keyframes logoGlowPulse{
+  0%,100%{ opacity:.55; transform: scale(1); }
+  50%{ opacity:.95; transform: scale(1.04); }
+}
+@media(max-width:520px){
+  .kicker{padding:10px 12px;}
+  .kicker span:last-child{font-size:13px; line-height:1.35;}
+}
+
+
+/* ============ MENU PAGE (unique layout) ============ */
+.menu-page { background: #000; }
+.menu-hero { position: relative; padding: 72px 0 40px; background: radial-gradient(900px 420px at 20% 15%, rgba(215,180,98,.18), rgba(0,0,0,0) 65%), #000; }
+.menu-hero-inner { max-width: 1100px; margin: 0 auto; padding: 0 22px; text-align: center; }
+.menu-hero-kicker { display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:999px; border:1px solid rgba(215,180,98,.28); background: rgba(255,255,255,.03); color: rgba(255,255,255,.86); font-weight:600; letter-spacing:.2px; }
+.menu-hero-kicker .dot{ width:10px; height:10px; border-radius:50%; background: linear-gradient(180deg, rgba(215,180,98,1), rgba(215,180,98,.35)); box-shadow: 0 0 0 4px rgba(215,180,98,.12); }
+.menu-hero-kicker .sep{ opacity:.6; }
+.menu-hero-title { margin: 18px 0 10px; font-size: clamp(34px, 4vw, 56px); line-height:1.05; }
+.menu-hero-sub { max-width: 780px; margin: 0 auto 22px; font-size: 16px; color: rgba(255,255,255,.82); }
+.menu-hero-sub .muted { opacity:.72; }
+.menu-hero-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.menu-hero-lines { position:absolute; inset:auto 0 12px; display:flex; justify-content:center; gap:10px; }
+.menu-hero-lines span{ width:42px; height:2px; border-radius:999px; background: rgba(215,180,98,.35); }
+.menu-hero-lines span:nth-child(2){ width:72px; background: rgba(215,180,98,.55); }
+
+.menu-gallery { padding: 34px 0 40px; }
+.menu-gallery-head { max-width: 1100px; margin: 0 auto 16px; padding: 0 22px; display:flex; align-items:flex-end; justify-content:space-between; gap:14px; }
+.menu-gallery-note { color: rgba(255,255,255,.68); font-size: 13px; }
+
+.menu-sheets { max-width: 1100px; margin: 0 auto; padding: 0 22px; display:grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.menu-sheet { border-radius: 22px; overflow:hidden; border: 1px solid rgba(255,255,255,.10); background: rgba(255,255,255,.03); box-shadow: 0 24px 60px rgba(0,0,0,.55); }
+.menu-sheet-media { position: relative; display:block; width:100%; aspect-ratio: 3 / 4; background:#0a0a0a; border:0; padding:0; cursor: zoom-in; }
+.menu-sheet-media img { width:100%; height:100%; object-fit: cover; display:block; }
+.menu-sheet-overlay { position:absolute; inset:0; display:flex; align-items:flex-end; justify-content:flex-end; padding:14px; background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.65) 100%); }
+.menu-sheet-overlay .pill{ padding:8px 10px; border-radius:999px; border: 1px solid rgba(215,180,98,.30); background: rgba(0,0,0,.35); color: rgba(255,255,255,.92); font-weight:700; font-size:12px; letter-spacing:.2px; }
+.menu-sheet-meta{ padding: 14px 14px 16px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.menu-sheet-title{ font-weight:700; color: rgba(255,255,255,.92); font-size: 13px; }
+.menu-sheet-actions{ display:flex; gap:10px; }
+
+.menu-tips { max-width: 1100px; margin: 0 auto; padding: 10px 22px 64px; display:grid; gap: 16px; grid-template-columns: 1.05fr .95fr; }
+.menu-tips-card { border-radius: 22px; border: 1px solid rgba(255,255,255,.10); background: rgba(255,255,255,.03); padding: 18px 18px 16px; }
+.menu-tips-card h3{ margin:0 0 10px; }
+.menu-tips-card ul{ margin:0; padding-left:18px; color: rgba(255,255,255,.80); }
+.menu-tips-card p{ margin:0 0 12px; }
+.menu-tips-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+
+.menu-lightbox { position: fixed; inset: 0; display:none; z-index: 9999; }
+.menu-lightbox[aria-hidden="false"]{ display:block; }
+.menu-lightbox-backdrop{ position:absolute; inset:0; background: rgba(0,0,0,.75); }
+.menu-lightbox-panel{ position: absolute; inset: 18px; margin:auto; max-width: 1200px; border-radius: 22px; border: 1px solid rgba(255,255,255,.12); background: rgba(10,10,10,.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); overflow:hidden; display:flex; flex-direction:column; }
+.menu-lightbox-close{ position:absolute; top:10px; right:10px; width:40px; height:40px; border-radius:12px; border:1px solid rgba(255,255,255,.16); background: rgba(0,0,0,.35); color:#fff; font-size:18px; cursor:pointer; z-index:2; }
+.menu-lightbox-body{ flex:1; display:flex; align-items:center; justify-content:center; padding: 18px; overflow:auto; }
+.menu-lightbox-body img{ max-width: 100%; height:auto; border-radius: 14px; box-shadow: 0 24px 70px rgba(0,0,0,.65); }
+.menu-lightbox-foot{ padding: 14px; display:flex; gap:10px; justify-content:flex-end; border-top: 1px solid rgba(255,255,255,.08); }
+
+@media (max-width: 980px){
+  .menu-sheets{ grid-template-columns: 1fr; }
+  .menu-sheet-media{ aspect-ratio: 16 / 9; }
+  .menu-gallery-head{ flex-direction:column; align-items:flex-start; }
+  .menu-tips{ grid-template-columns: 1fr; }
+  .menu-lightbox-panel{ inset: 10px; }
+}
+
+</style>
+</head>
+
+<body>
+  <div class="noise"></div>
+
+  <!-- HEADER (reuse EXACT same header + footer for all pages later) -->
+  <header class="header" aria-label="Site Header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Khayal Lounge Home">
+        <div class="brand-logo">
+          <img src="Logo.png" alt="Khayal Lounge Logo" />
+        </div>
+        <div class="brand-title">
+          <div class="name">KHAYAL LOUNGE</div>
+          <div class="tag">Luxury • Food • Drinks • Shisha شيشة</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="events.html">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions" aria-label="Header Actions">
+        <a class="pill" href="tel:+16477602926" aria-label="Call Khayal Lounge">
+          Call
+        </a>
+        <a class="pill" href="https://wa.me/16477602926" target="_blank" rel="noopener" aria-label="WhatsApp Khayal Lounge">
+          WhatsApp
+        </a>
+        <a class="pill cta" href="#reserve" aria-label="Reserve a table">
+          Reserve • حجز
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer" style="display:none;">
+      <div class="inner">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="events.html">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a class="cta" href="#reserve">Reserve • حجز</a>
+        <a href="tel:+16477602926">Call</a>
+        <a href="https://wa.me/16477602926" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+<main class="menu-page" id="top">
+  <section class="menu-hero">
+    <div class="menu-hero-inner">
+      <div class="menu-hero-kicker">
+        <span class="dot"></span>
+        <span>KHAYAL LOUNGE • MENU</span>
+        <span class="sep">•</span>
+        <span dir="rtl">المنيو</span>
+      </div>
+
+      <h1 class="menu-hero-title">Explore the Menu</h1>
+      <p class="menu-hero-sub">
+        Three beautifully designed menu boards — tap any page to zoom.
+        <span class="muted">Perfect on mobile and desktop.</span>
+      </p>
+
+      <div class="menu-hero-actions">
+        <a class="btn btn-primary" href="#menuGallery">View Menu Pages</a>
+        <a class="btn btn-ghost" href="#menuTips">How to Zoom</a>
+      </div>
+
+      <div class="menu-hero-lines" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-gallery" id="menuGallery">
+    <div class="menu-gallery-head">
+      <h2 class="section-title">Menu Pages</h2>
+      <div class="menu-gallery-note">
+        Tip: click / tap the image for full screen.
+      </div>
+    </div>
+
+    <div class="menu-sheets">
+      <article class="menu-sheet" data-src="Menu1.jpeg">
+        <button class="menu-sheet-media" type="button" aria-label="Open Menu Page 1">
+          <img src="Menu1.jpeg" alt="Menu page 1" loading="lazy">
+          <span class="menu-sheet-overlay">
+            <span class="pill">Tap to Zoom</span>
+          </span>
+        </button>
+        <div class="menu-sheet-meta">
+          <div class="menu-sheet-title">Breakfast • Appetizers • Salads</div>
+          <div class="menu-sheet-actions">
+            <button class="btn btn-ghost js-open-menu" type="button" data-src="Menu1.jpeg">Open</button>
+            <a class="btn btn-ghost" href="Menu1.jpeg" download>Download</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-sheet" data-src="Menu2.jpeg">
+        <button class="menu-sheet-media" type="button" aria-label="Open Menu Page 2">
+          <img src="Menu2.jpeg" alt="Menu page 2" loading="lazy">
+          <span class="menu-sheet-overlay">
+            <span class="pill">Tap to Zoom</span>
+          </span>
+        </button>
+        <div class="menu-sheet-meta">
+          <div class="menu-sheet-title">Main Dishes • Seafood • Sandwiches</div>
+          <div class="menu-sheet-actions">
+            <button class="btn btn-ghost js-open-menu" type="button" data-src="Menu2.jpeg">Open</button>
+            <a class="btn btn-ghost" href="Menu2.jpeg" download>Download</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-sheet" data-src="Menu3.jpeg">
+        <button class="menu-sheet-media" type="button" aria-label="Open Menu Page 3">
+          <img src="Menu3.jpeg" alt="Menu page 3" loading="lazy">
+          <span class="menu-sheet-overlay">
+            <span class="pill">Tap to Zoom</span>
+          </span>
+        </button>
+        <div class="menu-sheet-meta">
+          <div class="menu-sheet-title">Smoothies • Cold Drinks • Hot Drinks</div>
+          <div class="menu-sheet-actions">
+            <button class="btn btn-ghost js-open-menu" type="button" data-src="Menu3.jpeg">Open</button>
+            <a class="btn btn-ghost" href="Menu3.jpeg" download>Download</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="menu-tips" id="menuTips">
+    <div class="menu-tips-card">
+      <h3>Zoom Tips</h3>
+      <ul>
+        <li><strong>Mobile:</strong> pinch-to-zoom works inside the full screen viewer.</li>
+        <li><strong>Desktop:</strong> use your browser zoom or scroll to inspect details.</li>
+        <li><strong>Fast:</strong> click outside the page (or press ESC) to close.</li>
+      </ul>
+    </div>
+
+    <div class="menu-tips-card">
+      <h3>Want the latest updates?</h3>
+      <p class="muted">Menu items and prices may change. Message us anytime for today’s specials.</p>
+      <div class="menu-tips-actions">
+        <a class="btn btn-primary" href="#contact">Contact</a>
+        <a class="btn btn-ghost" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fullscreen menu viewer -->
+  <div class="menu-lightbox" id="menuLightbox" aria-hidden="true">
+    <div class="menu-lightbox-backdrop" data-close="1"></div>
+    <div class="menu-lightbox-panel" role="dialog" aria-modal="true" aria-label="Menu viewer">
+      <button class="menu-lightbox-close" type="button" aria-label="Close" data-close="1">✕</button>
+      <div class="menu-lightbox-body">
+        <img id="menuLightboxImg" src="" alt="Menu page preview">
+      </div>
+      <div class="menu-lightbox-foot">
+        <a class="btn btn-ghost" id="menuLightboxDownload" href="#" download>Download</a>
+        <button class="btn btn-primary" type="button" data-close="1">Done</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer aria-label="Site Footer">
+    <div class="footer-grid">
+      <div class="foot-col">
+        <div class="foot-brand">
+          <img src="Logo.png" alt="Khayal Lounge Logo" />
+          <div>
+            <p class="foot-title">KHAYAL LOUNGE</p>
+            <p class="foot-sub">Luxury Middle Eastern Lounge • Food • Drinks • Shisha شيشة</p>
+          </div>
+        </div>
+        <p class="foot-sub" style="margin-top:12px;">
+          5030 Maingate Dr, Mississauga, ON L4W 1X5<br />
+          +1 (647) 760-2926<br />
+          Daily 5:00 PM – 2:00 AM
+        </p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <a href="menu.html">Menu</a>
+        <a href="events.html">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="#reserve">Reserve • حجز</a>
+      </div>
+
+      <div class="foot-col">
+        <h4>Social</h4>
+        <a href="https://www.instagram.com/khayal.lounge/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@khayal.lounge" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.facebook.com/profile.php?id=100087505518676" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://wa.me/16477602926" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <span>© <span id="year"></span> Khayal Lounge. All rights reserved.</span>
+      <span>Luxury • ليالي • شيشة • حجز</span>
+    </div>
+  </footer>
+
+  <!-- Floating quick actions -->
+  <div class="floatbar" aria-label="Quick actions">
+    <a href="tel:+16477602926" aria-label="Call">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2z"/>
+      </svg>
+    </a>
+    <a href="https://wa.me/16477602926" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.52 3.48A11.84 11.84 0 0 0 12.02 0C5.39 0 .01 5.38 0 12.01c0 2.12.55 4.18 1.6 6.02L0 24l6.15-1.6a12 12 0 0 0 5.87 1.5h.01c6.63 0 12.01-5.38 12.01-12.01 0-3.21-1.25-6.22-3.52-8.41zM12.03 21.8h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.65.95.97-3.56-.24-.37A9.85 9.85 0 0 1 2.2 12C2.2 6.6 6.62 2.2 12.03 2.2a9.8 9.8 0 0 1 6.94 2.87A9.77 9.77 0 0 1 21.8 12c0 5.41-4.38 9.8-9.77 9.8zm5.67-7.34c-.31-.16-1.85-.91-2.13-1.01-.29-.11-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.36.23-.67.08-.31-.16-1.3-.48-2.48-1.54-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.14-.64.14-.14.31-.36.46-.54.16-.18.21-.31.31-.52.11-.21.05-.39-.03-.54-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.54-.71-.55l-.61-.01c-.21 0-.54.08-.82.39-.29.31-1.08 1.05-1.08 2.56s1.11 2.97 1.26 3.18c.16.21 2.18 3.33 5.28 4.67.74.32 1.32.51 1.77.65.74.24 1.42.21 1.96.13.6-.09 1.85-.75 2.11-1.48.26-.73.26-1.35.18-1.48-.08-.13-.29-.21-.6-.37z"/>
+      </svg>
+    </a>
+    <a href="#reserve" aria-label="Reserve">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V9h14v11zm0-13H5V6h14v1z"/>
+      </svg>
+    </a>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('mobileDrawer');
+    hamburger.addEventListener('click', () => {
+      const isOpen = drawer.style.display === 'block';
+      drawer.style.display = isOpen ? 'none' : 'block';
+      hamburger.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add('show');
+          io.unobserve(e.target);
+        }
+      }
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+
+    // Smooth hero parallax (very subtle)
+    const heroBg = document.getElementById('heroBg');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY || 0;
+      heroBg.style.transform = `translate3d(0, ${Math.min(y * 0.18, 120)}px, 0) scale(1.04)`;
+    }, { passive:true });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reservation form -> WhatsApp draft message (also keeps "website form" option working)
+    const form = document.getElementById('reserveForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const fullName = document.getElementById('fullName').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+      const guests = document.getElementById('guests').value;
+      const type = document.getElementById('type').value;
+      const notes = document.getElementById('notes').value.trim();
+
+      const typeLabel =
+        type === 'table' ? 'Table Reservation' :
+        type === 'saturday' ? 'Saturday Live Night' :
+        type === 'private' ? 'Private Party / Wedding / Engagement' : type;
+
+      const msg =
+`Khayal Lounge Reservation Request (حجز)
+Name: ${fullName}
+Phone: ${phone}
+Date: ${date}
+Time: ${time}
+Guests: ${guests}
+Type: ${typeLabel}
+Notes: ${notes || '—'}`;
+
+      const url = 'https://wa.me/16477602926?text=' + encodeURIComponent(msg);
+      window.open(url, '_blank', 'noopener');
+      form.reset();
+    });
+  
+
+
+    // Menu lightbox (menu.html)
+    (function () {
+      const lb = document.getElementById('menuLightbox');
+      const img = document.getElementById('menuLightboxImg');
+      const dl = document.getElementById('menuLightboxDownload');
+      if (!lb || !img || !dl) return;
+
+      function openMenu(src) {
+        img.src = src;
+        dl.href = src;
+        lb.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMenu() {
+        lb.setAttribute('aria-hidden', 'true');
+        img.src = '';
+        dl.href = '#';
+        document.body.style.overflow = '';
+      }
+
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.js-open-menu');
+        const media = e.target.closest('.menu-sheet-media');
+        const close = e.target.closest('[data-close="1"]');
+
+        if (btn) return openMenu(btn.dataset.src);
+        if (media) {
+          const src = media.querySelector('img')?.getAttribute('src');
+          if (src) return openMenu(src);
+        }
+        if (close) return closeMenu();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lb.getAttribute('aria-hidden') === 'false') closeMenu();
+      });
+    })();
+
+</script>
+</body>
+</html>
